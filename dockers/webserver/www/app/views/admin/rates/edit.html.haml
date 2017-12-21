@@ -1,0 +1,9 @@
+%section.container
+  %h1 
+    = page_title
+
+  = bootstrap_form_for @rate, label_col: 'col-xs-4', control_col: 'col-xs-10', url: admin_rate_path(id: @rate.id) do |f|
+    = render 'fields', f: f
+  = link_to admin_rates_path, class: 'btn btn-primary text-center back' do
+    %span.glyphicon.glyphicon-log-out
+    = t('actions.back') 

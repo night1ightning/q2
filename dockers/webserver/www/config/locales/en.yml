@@ -1,0 +1,63 @@
+en:
+  creator: Copyright © Ivan Moroz 2017
+
+  title:
+    default: Test Work
+    rates:
+      show:  Exchange Rates
+      index: List of Rates 
+      new:   New rate
+      edit:  Change Rate
+      edit_first: Edit first page
+
+  navs:
+    links:
+      rates: Home
+      admin: Admin
+    info: Test Work
+      
+  actions:
+    edit: Edit
+    destroy: Destroy
+    back: Back
+    new: New
+    confirm: Are you sure?
+    action: Actions
+
+  rates:
+    show:
+      remote_rate: The rates from Remote
+      customer_rate: This rates created is a customer
+
+  admin:
+    rates:
+      create:
+        notice: Rate was successfully created.
+      destroy:
+        notice: Rate was successfully destroyed.
+      update:
+        notice: Rate was successfully updated.
+      index:
+        rates_em: Not found customer rates
+
+  activerecord:
+    attributes:
+      rate:
+        ratio:   Ratio
+        expired_at: Expired
+        created_at: Created
+        updated_at: Updated
+
+  logger:
+    get_parse: "Rates::Remote::GetParse %{message}"
+
+  sourse:
+    remote: This official rate
+    local:  This rate created by customer
+
+  date:
+    formats:
+      normal: "%d.%m.%Y"
+  time:
+    formats:
+      normal: "%d.%m.%Y | %H:%M:%S"

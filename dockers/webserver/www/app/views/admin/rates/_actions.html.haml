@@ -1,0 +1,9 @@
+= link_to edit_admin_rate_path(rate), class: 'btn btn-warning' do
+  %span.glyphicon.glyphicon-cog
+  = t('actions.edit')
+  
+%span 
+
+= link_to admin_rate_path(rate), method: :delete, data: { confirm: t('actions.confirm') }, class: 'btn btn-danger' do
+  %span.glyphicon.glyphicon-trash
+  = t('actions.destroy')

@@ -1,0 +1,8 @@
+%h2 
+  = t 'title.rate.edit_first'
+= bootstrap_form_for @rate, label_col: 'col-xs-4', control_col: 'col-xs-10', url: admin_rate_path(@rate) do |f|
+  = render 'fields', f: f
+%br
+%hr
+
+

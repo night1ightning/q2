@@ -1,0 +1,10 @@
+%header.bg-primary.text-white
+  .container.text-center
+    %h1 
+      = page_title
+
+%section#about
+  .container
+    .row
+      .col-lg-8.mx-auto
+        = react_component("Rates.Home", { data: @rate.to_json, remote: t('sourse.remote'), local: t('sourse.local') })

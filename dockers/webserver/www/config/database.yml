@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: test
+  password: test
+  database: news
+
+development:
+  <<: *default
+  host: postgres
+
+test:
+  <<: *default
+  host: postgres_test
+
+production:
+  <<: *default
+  host: postgres

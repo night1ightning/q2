@@ -1,0 +1,33 @@
+%section.container
+  %h2.text-center 
+    = page_title
+  = will_paginate @rates
+  - I18n.with_options(scope: 'activerecord.attributes.rate') do |art|
+    %table.table.table-striped
+      %thead
+        %tr
+          %th 
+            = art.t :ratio
+          %th 
+            = art.t :expired_at
+          %th 
+            = art.t :created_at
+          %th 
+            = art.t :updated_at
+          %th 
+            = t 'actions.action'
+
+      %tbody
+        - if @rates.present?
+          = render @rates
+        - else
+          %tr
+            %td{colspan: 6}
+              %p 
+                = t('.rates_em')
+        %tr
+          %td{colspan: 6}
+            = link_to new_admin_rate_path, class: 'btn btn btn-success' do
+              %span.glyphicon.glyphicon-plus
+              = t('actions.new')
+  = will_paginate @rates

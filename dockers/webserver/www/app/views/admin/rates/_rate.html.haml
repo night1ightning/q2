@@ -1,0 +1,11 @@
+%tr
+  %td
+    = rate.ratio
+  %td 
+    = l(rate.expired_at, format: :normal)
+  %td 
+    = l(rate.created_at, format: :normal)
+  %td 
+    = l(rate.updated_at, format: :normal)
+  %td
+    = render 'actions', rate: rate
